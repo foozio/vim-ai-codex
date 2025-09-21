@@ -124,6 +124,28 @@ let g:vim_ai_openai_image = {
 \  "token_load_fn": "",
 \}
 
+let g:vim_ai_openai_codex_complete = {
+\  "model": "code-davinci-002",
+\  "endpoint_url": "https://api.openai.com/v1/completions",
+\  "suffix": "",
+\  "max_tokens": 256,
+\  "temperature": 0.2,
+\  "top_p": "",
+\  "n": 1,
+\  "stream": 1,
+\  "logprobs": 0,
+\  "stop": "",
+\  "presence_penalty": 0,
+\  "frequency_penalty": 0,
+\  "best_of": 1,
+\  "logit_bias": "",
+\  "request_timeout": 20,
+\  "auth_type": "bearer",
+\  "token_file_path": "",
+\  "token_load_fn": "",
+\}
+let g:vim_ai_openai_codex_edit = g:vim_ai_openai_codex_complete
+
 if !exists("g:vim_ai_open_chat_presets")
   let g:vim_ai_open_chat_presets = {
   \  "preset_below": "below new",

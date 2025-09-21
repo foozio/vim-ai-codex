@@ -131,7 +131,21 @@ If you are interested in more tips or would like to level up your Vim with more 
 
 ## Providers
 
-This is the list of 3rd party provider plugins allowing to use different AI providers.
+`vim-ai` ships with two OpenAI-compatible providers:
+
+- `openai` &mdash; Uses the Chat Completions API (default configuration).
+- `openai-codex` &mdash; Targets the legacy Codex Completions API for code-focused prompts.
+
+Switch between them by overriding the provider on a command or via a role, for example:
+
+```vim
+let g:vim_ai_complete = {
+\ 'provider': 'openai-codex',
+\ 'options': { 'model': 'code-davinci-002', 'max_tokens': 512 },
+\}
+```
+
+Additional 3rd party providers expand support for other services:
 
 - [google provider](https://github.com/madox2/vim-ai-provider-google) - Google's Gemini models
 - [OpenAI Responses API Provider](https://github.com/kevincojean/vim-ai-provider-openai-responses) - OpenAI Responses API compatibility plug-in

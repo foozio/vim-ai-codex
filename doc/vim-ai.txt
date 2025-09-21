@@ -60,6 +60,14 @@ Options: >
   \  },
   \}
 
+To target the Codex Completions API instead, change the provider: >
+  let g:vim_ai_complete = {
+  \  "provider": "openai-codex",
+  \  "options": g:vim_ai_openai_codex_complete,
+  \}
+<
+The Codex defaults are stored in `g:vim_ai_openai_codex_complete`.
+
 Check OpenAI docs for more information:
 https://platform.openai.com/docs/api-reference/completions
 
@@ -109,6 +117,14 @@ Options: >
   \    "paste_mode": 1,
   \  },
   \}
+
+For Codex-powered edits use: >
+  let g:vim_ai_edit = {
+  \  "provider": "openai-codex",
+  \  "options": g:vim_ai_openai_codex_edit,
+  \}
+<
+Codex defaults are defined in `g:vim_ai_openai_codex_edit`.
 
 Check OpenAI docs for more information:
 https://platform.openai.com/docs/api-reference/completions
